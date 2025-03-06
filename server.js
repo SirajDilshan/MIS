@@ -22,6 +22,8 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
+app.use("/api/auth", require("./routes/authRoutes"));
+
 app.get("/", (req, res) => {
   res.send("UMIS Backend Running");
 });
